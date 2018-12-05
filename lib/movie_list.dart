@@ -65,7 +65,7 @@ class _MovieListState extends State<MovieList> {
                       onPressed: () {
                         Navigator.push(context,
                             new MaterialPageRoute(builder: (context) {
-                          return new MoviesDetail(movies[i]);
+                          return new MovieDetail(movies[i]);
                         }));
                       },
                       color: Colors.white,
