@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Movie List',
       home: new MovieList(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
