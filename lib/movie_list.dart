@@ -3,6 +3,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:movie_listing_app/config.dart';
+import 'movie_details.dart';
 
 class MovieList extends StatefulWidget {
   @override
@@ -61,6 +62,12 @@ class _MovieListState extends State<MovieList> {
                     return new FlatButton(
                       child: new MovieCell(movies, i),
                       padding: const EdgeInsets.all(0.0),
+                      onPressed: () {
+                        Navigator.push(context,
+                            new MaterialPageRoute(builder: (context) {
+                          return new MoviesDetail(movies[i]);
+                        }));
+                      },
                       color: Colors.white,
                     );
                   }),
